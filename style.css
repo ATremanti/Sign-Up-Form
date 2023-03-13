@@ -97,7 +97,7 @@ p > a {
     font-weight: bold;
 }
 
-form {
+.form-container {
     display: flex;
     }
 

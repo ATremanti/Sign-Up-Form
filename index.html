@@ -31,48 +31,53 @@
                 <div class="text-container">
                     <p class="main-text">This is not a real online service! You know you need something
                         like this in your life to help you realise your deepest dreams.
-                        Sign up <em>now</em> to get started! 
-                        <p class="main-text">You <em>know</em> you want to.</p>
+                        Sign up <em>now</em> to get started!
+                    <p class="main-text">You <em>know</em> you want to.</p>
                     </p>
                 </div>
             </div>
             <div class="form-section">
                 <h2>Let's do this!</h2>
-                <form action="#" method="post">
-                    <fieldset>
-                        <div class="label-group">
-                            <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name" name="first_name" required>
-                        </div>
-                        <div class="label-group">
-                            <label for="user_email">EMAIL</label>
-                            <input type="email" id="user_email" name="email" required>
-                        </div>
-                        <div class="label-group">
-                            <label for="user_password">PASSWORD</label>
-                            <input type="password" id="user_password" name="password" required>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="label-group">
-                            <label for="last_name">LAST NAME</label>
-                            <input type="text" id="last_name" name="last_name" required>
-                        </div>
+                <form action="#" method="post" id="main_form">
+                    <div class="form-container">
+                        <fieldset>
+                            <div class="label-group">
+                                <label for="first_name">FIRST NAME</label>
+                                <input type="text" id="first_name" name="first_name" minlength="2" maxlength="30"
+                                    required>
+                            </div>
+                            <div class="label-group">
+                                <label for="user_email">EMAIL</label>
+                                <input type="email" id="user_email" name="email" required>
+                            </div>
+                            <div class="label-group">
+                                <label for="user_password">PASSWORD</label>
+                                <input type="password" id="user_password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,30}$" title="Password must have between 8 and 30 characters, have at least one uppercase, one lowercase, one number and one symbol" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="label-group">
+                                <label for="last_name">LAST NAME</label>
+                                <input type="text" id="last_name" name="last_name" minlength="2" maxlength="30"
+                                    required>
+                            </div>
 
-                        <div class="label-group">
-                            <label for="phone_number">PHONE NUMBER</label>
-                            <input type="number" id="phone_number" name="phone" required>
-                        </div>
+                            <div class="label-group">
+                                <label for="phone_number">PHONE NUMBER</label>
+                                <input type="number" id="phone_number" name="phone"
+                                    pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required>
+                            </div>
 
-                        <div class="label-group">
-                            <label for="password_confirmation">CONFIRM PASSWORD</label>
-                            <input type="password" id="password_confirmation" required>
-                        </div>
-                    </fieldset>
+                            <div class="label-group">
+                                <label for="password_confirmation">CONFIRM PASSWORD</label>
+                                <input type="password" id="password_confirmation" required>
+                            </div>
+                        </fieldset>
+                    </div>
                 </form>
             </div>
             <div class="bottom-section">
-                <button type="submit" class="submit-btn">Create Account</button>
+                <button type="submit" class="submit-btn" form="main_form">Create Account</button>
                 <p>Already have an account? <a href="#">Log in</a></p>
             </div>
         </div>
